@@ -1,0 +1,118 @@
+2025-08-12 14:55:18,911 - tools.video_manager - INFO - 会话清理管理器启动: 清理间隔 1h, 会话TTL 24h
+2025-08-12 14:55:18,911 - __main__ - INFO - 尝试加载模型: openai/whisper-base
+2025-08-12 14:55:18,911 - __main__ - INFO - Starting Video Tools MCP Server on 0.0.0.0:8000
+2025-08-12 14:55:18,911 - __main__ - INFO - Available tools:
+2025-08-12 14:55:18,911 - __main__ - INFO - - upload_video: 上传视频文件并创建会话
+2025-08-12 14:55:18,911 - __main__ - INFO - - video2pictures: 将视频转换为图片帧
+2025-08-12 14:55:18,911 - __main__ - INFO - - picturepicker: 从帧中选择关键帧
+2025-08-12 14:55:18,911 - __main__ - INFO - - video2audio: 将视频转换为音频
+2025-08-12 14:55:18,911 - __main__ - INFO - - audio2text: 将音频转换为文字
+2025-08-12 14:55:18,911 - __main__ - INFO - - video2metadata: 获取视频元数据
+2025-08-12 14:55:18,911 - __main__ - INFO - - video2motionTokens: 生成运动令牌
+2025-08-12 14:55:18,911 - __main__ - INFO - - get_session_info: 获取会话信息和状态
+2025-08-12 14:55:18,911 - __main__ - INFO - - cleanup_session: 手动清理会话
+2025-08-12 14:55:18,911 - __main__ - INFO - - get_system_stats: 获取系统统计信息
+2025-08-12 14:55:18,958 - __main__ - INFO - FFmpeg状态: 可用
+2025-08-12 14:55:18,958 - __main__ - INFO - 工作目录: /Users/bytedance/video-mcp-server/video_processing_data
+
+
+╭─ FastMCP 2.0 ──────────────────────────────────────────────────────────────╮
+│                                                                            │
+│        _ __ ___ ______           __  __  _____________    ____    ____     │
+│       _ __ ___ / ____/___ ______/ /_/  |/  / ____/ __ \  |___ \  / __ \    │
+│      _ __ ___ / /_  / __ `/ ___/ __/ /|_/ / /   / /_/ /  ___/ / / / / /    │
+│     _ __ ___ / __/ / /_/ (__  ) /_/ /  / / /___/ ____/  /  __/_/ /_/ /     │
+│    _ __ ___ /_/    \__,_/____/\__/_/  /_/\____/_/      /_____(_)____/      │
+│                                                                            │
+│                                                                            │
+│                                                                            │
+│    🖥️  Server name:     video-tools                                         │
+│    📦 Transport:       Streamable-HTTP                                     │
+│    🔗 Server URL:      http://0.0.0.0:8000/mcp/                            │
+│                                                                            │
+│    📚 Docs:            https://gofastmcp.com                               │
+│    🚀 Deploy:          https://fastmcp.cloud                               │
+│                                                                            │
+│    🏎️  FastMCP version: 2.11.1                                              │
+│    🤝 MCP version:     1.12.3                                              │
+│                                                                            │
+╰────────────────────────────────────────────────────────────────────────────╯
+
+
+[08/12/25 14:55:18] INFO     Starting MCP server 'video-tools'    server.py:1519
+                             with transport 'streamable-http' on                
+                             http://0.0.0.0:8000/mcp/                           
+/Users/bytedance/video-mcp-server/venv/lib/python3.13/site-packages/websockets/legacy/__init__.py:6: DeprecationWarning: websockets.legacy is deprecated; see https://websockets.readthedocs.io/en/stable/howto/upgrade.html for upgrade instructions
+  warnings.warn(  # deprecated in 14.0 - 2024-11-09
+/Users/bytedance/video-mcp-server/venv/lib/python3.13/site-packages/uvicorn/protocols/websockets/websockets_impl.py:17: DeprecationWarning: websockets.server.WebSocketServerProtocol is deprecated
+  from websockets.server import WebSocketServerProtocol
+INFO:     Started server process [98538]
+INFO:     Waiting for application startup.
+2025-08-12 14:55:19,084 - mcp.server.streamable_http_manager - INFO - StreamableHTTP session manager started
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+Device set to use cpu
+2025-08-12 14:55:20,683 - __main__ - INFO - Whisper 模型加载成功: openai/whisper-base
+2025-08-12 14:55:34,323 - mcp.server.streamable_http_manager - INFO - Created new transport with session ID: 52e03861fd3b417a9536a26a8e908744
+INFO:     127.0.0.1:58566 - "POST /mcp/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58569 - "POST /mcp/ HTTP/1.1" 202 Accepted
+INFO:     127.0.0.1:58570 - "GET /mcp/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58572 - "POST /mcp/ HTTP/1.1" 200 OK
+2025-08-12 14:55:34,329 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+INFO:     127.0.0.1:58574 - "POST /mcp/ HTTP/1.1" 200 OK
+2025-08-12 14:55:34,332 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+INFO:     127.0.0.1:58579 - "POST /mcp/ HTTP/1.1" 200 OK
+2025-08-12 14:55:35,652 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-08-12 14:55:35,656 - tools.video_manager - INFO - 创建新会话: 3a504d41-54b3-4c53-b6e4-0d3f71578996, 文件: test_video_a2t.mp4, 工作目录: /Users/bytedance/video-mcp-server/video_processing_data/3a504d41-54b3-4c53-b6e4-0d3f71578996
+2025-08-12 14:55:35,656 - tools.upload_video - INFO - 视频上传成功: test_video_a2t.mp4 (0.46 MB)
+2025-08-12 14:55:35,656 - tools.upload_video - INFO - 创建会话: 3a504d41-54b3-4c53-b6e4-0d3f71578996
+2025-08-12 14:55:35,656 - tools.upload_video - INFO - 工作目录: /Users/bytedance/video-mcp-server/video_processing_data/3a504d41-54b3-4c53-b6e4-0d3f71578996
+INFO:     127.0.0.1:58581 - "POST /mcp/ HTTP/1.1" 200 OK
+2025-08-12 14:55:35,660 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-08-12 14:55:35,668 - tools.video2pictures - INFO - 开始提取视频帧: 总帧数 465, 间隔 1, 目标 1000 帧
+2025-08-12 14:55:36,604 - tools.video2pictures - INFO - 帧提取完成: 465 帧
+2025-08-12 14:55:36,604 - tools.video2pictures - INFO - 正在编码帧数据...
+2025-08-12 14:55:36,667 - tools.video_manager - INFO - 处理数据已保存: 3a504d41-54b3-4c53-b6e4-0d3f71578996 -> frames
+2025-08-12 14:55:36,667 - tools.video2pictures - INFO - 帧数据已保存到会话目录: 3a504d41-54b3-4c53-b6e4-0d3f71578996
+INFO:     127.0.0.1:58587 - "POST /mcp/ HTTP/1.1" 200 OK
+2025-08-12 14:55:37,021 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-08-12 14:55:37,024 - tools.picturepicker - INFO - 关键帧选择完成: 16 张
+2025-08-12 14:55:37,027 - tools.video_manager - INFO - 处理数据已保存: 3a504d41-54b3-4c53-b6e4-0d3f71578996 -> keyframes
+2025-08-12 14:55:37,027 - tools.picturepicker - INFO - 关键帧已保存到服务器: /Users/bytedance/video-mcp-server/video_processing_data/3a504d41-54b3-4c53-b6e4-0d3f71578996/keyframes
+INFO:     127.0.0.1:58589 - "POST /mcp/ HTTP/1.1" 200 OK
+2025-08-12 14:55:37,042 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-08-12 14:55:37,092 - tools.video2audio - INFO - 开始音频提取: wav 格式
+2025-08-12 14:55:37,165 - tools.video2audio - INFO - 音频提取完成: 0.47 MB
+2025-08-12 14:55:37,166 - tools.video_manager - INFO - 处理数据已保存: 3a504d41-54b3-4c53-b6e4-0d3f71578996 -> audio
+2025-08-12 14:55:37,166 - tools.video2audio - INFO - 音频已保存到服务器: /Users/bytedance/video-mcp-server/video_processing_data/3a504d41-54b3-4c53-b6e4-0d3f71578996/audio/audio.wav
+INFO:     127.0.0.1:58591 - "POST /mcp/ HTTP/1.1" 200 OK
+2025-08-12 14:55:37,179 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-08-12 14:55:37,180 - tools.audio2text - INFO - 开始音频转录: audio.wav (0.47 MB)
+2025-08-12 14:55:37,180 - tools.audio2text - INFO - 正在进行语音识别...
+`return_token_timestamps` is deprecated for WhisperFeatureExtractor and will be removed in Transformers v5. Use `return_attention_mask` instead, as the number of frames can be inferred from it.
+Using custom `forced_decoder_ids` from the (generation) config. This is deprecated in favor of the `task` and `language` flags/config options.
+Transcription using a multilingual Whisper will default to language detection followed by transcription instead of translation to English. This might be a breaking change for your use case. If you want to instead always translate your audio to English, make sure to pass `language='en'`. See https://github.com/huggingface/transformers/pull/28687 for more details.
+2025-08-12 14:55:38,876 - tools.audio2text - INFO - 转录完成: 56 字符
+2025-08-12 14:55:38,876 - tools.video_manager - INFO - 转录文本已保存: /Users/bytedance/video-mcp-server/video_processing_data/3a504d41-54b3-4c53-b6e4-0d3f71578996/transcript.txt
+2025-08-12 14:55:38,876 - tools.video_manager - INFO - 处理数据已保存: 3a504d41-54b3-4c53-b6e4-0d3f71578996 -> transcript
+2025-08-12 14:55:38,877 - tools.audio2text - INFO - 转录文本已保存: /Users/bytedance/video-mcp-server/video_processing_data/3a504d41-54b3-4c53-b6e4-0d3f71578996/transcript.txt
+INFO:     127.0.0.1:58599 - "POST /mcp/ HTTP/1.1" 200 OK
+2025-08-12 14:55:38,881 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-08-12 14:55:38,884 - tools.video2metadata - INFO - 元数据提取完成: 576x1024, 00:00:15
+2025-08-12 14:55:38,884 - tools.video_manager - INFO - 元数据已保存: /Users/bytedance/video-mcp-server/video_processing_data/3a504d41-54b3-4c53-b6e4-0d3f71578996/metadata.json
+2025-08-12 14:55:38,885 - tools.video_manager - INFO - 处理数据已保存: 3a504d41-54b3-4c53-b6e4-0d3f71578996 -> metadata
+2025-08-12 14:55:38,885 - tools.video2metadata - INFO - 元数据已保存到服务器: /Users/bytedance/video-mcp-server/video_processing_data/3a504d41-54b3-4c53-b6e4-0d3f71578996/metadata.json
+2025-08-12 14:55:38,888 - mcp.server.streamable_http - INFO - Terminating session: 52e03861fd3b417a9536a26a8e908744
+INFO:     127.0.0.1:58601 - "DELETE /mcp/ HTTP/1.1" 200 OK
+INFO:     Shutting down
+ERROR:    Cancel 0 running task(s), timeout graceful shutdown exceeded
+INFO:     Waiting for application shutdown.
+2025-08-12 14:57:02,299 - mcp.server.streamable_http_manager - INFO - StreamableHTTP session manager shutting down
+INFO:     Application shutdown complete.
+INFO:     Finished server process [98538]
+2025-08-12 14:57:02,299 - __main__ - INFO - 
+收到关闭信号, 正在清理...
+2025-08-12 14:57:02,299 - tools.video_manager - INFO - 会话清理管理器已停止
+2025-08-12 14:57:02,348 - tools.video_manager - INFO - 删除会话目录: /Users/bytedance/video-mcp-server/video_processing_data/3a504d41-54b3-4c53-b6e4-0d3f71578996
+2025-08-12 14:57:02,348 - tools.video_manager - INFO - 清理会话完成: 3a504d41-54b3-4c53-b6e4-0d3f71578996
+2025-08-12 14:57:02,350 - __main__ - INFO - 清理完成, 退出程序
