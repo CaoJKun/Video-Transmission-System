@@ -102,9 +102,16 @@ chmod +x scripts/*.sh
 
 服务器将在 `http://10.37.81.240:8000/mcp/` 可访问
 
-## 测试
+## 测试（调用大模型的的测试+不调用大模型的测试）
 
-### 本地测试
+###调用大模型的测试（本地）
+在第一个终端运行完python main.py后，
+打开一个新的终端，同样进入虚拟环境后
+输入命令行：python test/test_mcp_client.py --llm --video test/test_video_a2t.mp4 --api_key "输入你的gemini的api key"
+运行后即可得到结果。
+
+###不调用大模型的测试（本地+远程）
+#### 本地测试
 
 ```bash
 # 使用本地视频文件测试
@@ -115,7 +122,7 @@ python3 test/test_mcp_client.py --video test/test_video_a2t.mp4 --verbose
 python3 test/test_mcp_client.py --verbose
 ```
 
-### 远程测试
+#### 远程测试
 
 ```bash
 # 测试远程服务器
@@ -194,6 +201,7 @@ video-mcp-server/
 │   ├── restart_server.sh           # 服务器重启脚本
 │   └── download_whisper.sh         # 预下载 Whisper 模型
 ├── test/
+|   ├── llm.py                      # 调用gemini大模型分析视频，生成policy  
 │   ├── test_mcp_client.py          # 本地测试客户端
 │   ├── test_remote_client.py       # 远程服务器测试客户端
 │   └── test_video_a2t.mp4          # 示例测试视频
