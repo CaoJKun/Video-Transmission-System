@@ -102,15 +102,16 @@ chmod +x scripts/*.sh
 
 服务器将在 `http://10.37.81.240:8000/mcp/` 可访问
 
-## 测试（调用大模型的的测试+不调用大模型的测试）
+## 测试
 
-###调用大模型的测试（本地）
-在第一个终端运行完python main.py后，
-打开一个新的终端，同样进入虚拟环境后
-输入命令行：python test/test_mcp_client.py --llm --video test/test_video_a2t.mp4 --api_key "输入你的gemini的api key"
-运行后即可得到结果。
+### 本地测试 with LLM (update by @Wangzimeng)
+1. 打开第一个terminal，运行`python main.py`
+2. 打开一个新的终端，同样进入虚拟环境:
+    1. 输入命令行：`python test/test_mcp_client.py --llm --video test/test_video_a2t.mp4 --api_key` 
+    2. `输入你的gemini的api key: `
+    3. 运行后即可得到结果。
 
-###不调用大模型的测试（本地+远程）
+### 测试（本地+远程）without LLM
 #### 本地测试
 
 ```bash
